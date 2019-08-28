@@ -2,8 +2,8 @@ version: '3.3'
 services:
   prometheus:
     build: ./monitoring/prometheus
-    ports:
-      - 9090:9090
+    # ports:
+    #   - 9090:9090
     networks:
       - monitor
     volumes:
@@ -19,8 +19,8 @@ services:
     command:
       - '--config.file=/etc/alertmanager/alertmanager.yml'
       - '--log.level=debug'
-    ports:
-      - 9093:9093
+    # ports:
+    #   - 9093:9093
     networks:
       - monitor
 
@@ -51,8 +51,8 @@ services:
       - '/var/run:/var/run:ro'
       - '/sys:/sys:ro'
       - '/var/lib/docker/:/var/lib/docker:ro'
-    ports:
-      - 8080:8080
+    # ports:
+    #   - 8080:8080
     networks:
       - monitor
 

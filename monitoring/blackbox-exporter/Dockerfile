@@ -1,2 +1,2 @@
-FROM prom/blackbox-exporter:v0.14.0
+FROM prom/blackbox-exporter
 ADD blackbox.yml /srv/blackbox.yml
