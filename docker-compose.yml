@@ -28,7 +28,7 @@ services:
     image: prom/node-exporter
     user: root
     networks:
-      - back_net
+      - monitor
     volumes:
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro
