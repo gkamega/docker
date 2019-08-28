@@ -74,13 +74,15 @@ volumes:
   prometheus_data:
     driver: local
     driver_opts:
-      type: bind
-      device: ${MON_PATH}/prometheus
+      type: none
+      o: bind
+      device: ${PWD}/.configs/prometheus
   grafana_data:
     driver: local
     driver_opts:
-      type: bind
-      device: ${MON_PATH}/grafana
+      type: none
+      o: bind
+      device: ${PWD}/.configs/grafana
 
 networks:
   monitor:
