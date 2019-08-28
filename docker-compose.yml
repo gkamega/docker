@@ -2,8 +2,8 @@ version: '3.3'
 services:
   prometheus:
     build: ./monitoring/prometheus
-    # ports:
-    #   - 9090:9090
+    ports:
+      - 9090:9090
     networks:
       - monitor
     volumes:
