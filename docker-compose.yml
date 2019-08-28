@@ -32,7 +32,7 @@ services:
     volumes:
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro
-      - /:/rootfs:ro
+      - /:/rootfs,rslave:ro
     command:
       - '--path.procfs=/host/proc'
       - '--path.sysfs=/host/sys'
